@@ -20,9 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-e2pemw+#d$n_#^_qmavrwjw(1j$70gqsb+r=drn+@u2c$-)b!&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "igec-shash.in",
+    "www.igec-shash.in",
+    "3.110.108.154:8000",
+]
 
 
 # Application definition
@@ -112,12 +116,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
 
-# Tell Django where to find static files (our images are in the public folder)
 STATICFILES_DIRS = [
-    BASE_DIR / 'public',
+    BASE_DIR / "public",
 ]
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
 # Email
