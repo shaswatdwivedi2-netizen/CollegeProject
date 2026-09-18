@@ -1,0 +1,263 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form | IGEC Sagar</title>
+    <link rel="stylesheet" href="{% static 'form.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <header class="header">
+        <a href="/" class="logo">
+            <div class="logo-mark">IG</div>
+            <div class="logo-text">
+                <strong>IGEC Sagar</strong>
+                <small>Est. 1996</small>
+            </div>
+        </a>
+        <a href="/" class="back-link">
+            &larr; Back to Home
+        </a>
+    </header>
+
+    <div class="form-wrapper">
+        <div class="form-header">
+            <h1>Admission Application 2026-27</h1>
+            <p>Please provide accurate details to process your application.</p>
+        </div>
+
+        <div class="stepper" id="stepper">
+            <div class="step active" data-step="1">
+                <div class="step-circle">1</div>
+                <div class="step-label">Personal</div>
+            </div>
+            <div class="step" data-step="2">
+                <div class="step-circle">2</div>
+                <div class="step-label">Contact</div>
+            </div>
+            <div class="step" data-step="3">
+                <div class="step-circle">3</div>
+                <div class="step-label">Academic</div>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <form id="admissionForm" action="/admissionform" method="POST">
+                {% csrf_token %}
+                <!-- CSRF token is a security feature that prevents malicious sites from submitting forms
+                     on behalf of a user. Django requires this for every POST form. -->
+                <div class="form-section active" id="section-1">
+                    <h2 class="section-title">Personal Information</h2>
+                    <div class="grid-2">
+                        <div class="form-group full">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="As per 10th marksheet" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth <span class="required">*</span></label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender <span class="required">*</span></label>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected>Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fatherName">Father's Name <span class="required">*</span></label>
+                            <input type="text" id="fatherName" name="fatherName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="motherName">Mother's Name <span class="required">*</span></label>
+                            <input type="text" id="motherName" name="motherName" required>
+                        </div>
+                        <div class="form-group full">
+                            <label for="aadhar">Aadhar Number <span class="required">*</span></label>
+                            <input type="text" id="aadhar" name="aadhar" placeholder="12-digit Aadhar number" pattern="[0-9]{12}" title="Please enter valid 12 digit Aadhar number" required>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <div></div> <!-- empty div for flex spacing -->
+                        <button type="button" class="btn btn-next" onclick="nextStep(1)">Next Step &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Contact Details -->
+                <div class="form-section" id="section-2">
+                    <h2 class="section-title">Contact Details</h2>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="student@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+                        </div>
+                        <div class="form-group full">
+                            <label for="address">Permanent Address <span class="required">*</span></label>
+                            <textarea id="address" name="address" placeholder="House no, Street, Village/City" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City/District <span class="required">*</span></label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode <span class="required">*</span></label>
+                            <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-prev" onclick="prevStep(2)">&larr; Previous</button>
+                        <button type="button" class="btn btn-next" onclick="nextStep(2)">Next Step &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Academic Details -->
+                <div class="form-section" id="section-3">
+                    <h2 class="section-title">Academic & Course Details</h2>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label for="branch">Preferred Branch <span class="required">*</span></label>
+                            <select id="branch" name="branch" required>
+                                <option value="" disabled selected>Select Branch</option>
+                                <option value="IT">Information Technology</option>
+                                <option value="ME">Mechanical Engineering</option>
+                                <option value="CE">Civil Engineering</option>
+                                <option value="ECE">Electronics & Comm.</option>
+                                <option value="EE">Electrical Engineering</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="jeeScore">JEE Main Score (Optional)</label>
+                            <input type="number" id="jeeScore" name="jeeScore" placeholder="Percentile" step="0.01" min="0" max="100">
+                        </div>
+                        
+                        <div class="form-group full" style="margin-bottom: 5px; margin-top: 10px;">
+                            <label style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Class 12th Details</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="board12">Board <span class="required">*</span></label>
+                            <select id="board12" name="board12" required>
+                                <option value="" disabled selected>Select Board</option>
+                                <option value="MPBSE">MP Board (MPBSE)</option>
+                                <option value="CBSE">CBSE</option>
+                                <option value="ICSE">ICSE</option>
+                                <option value="Other">Other State Board</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="roll12">12th Roll Number <span class="required">*</span></label>
+                            <input type="text" id="roll12" name="roll12" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="grade12">12th Percentage (%) <span class="required">*</span></label>
+                            <input type="number" id="grade12" name="grade12" step="0.1" min="0" max="100" placeholder="e.g. 85.5" required>
+                        </div>
+                        
+                        <div class="form-group full" style="margin-bottom: 5px; margin-top: 10px;">
+                            <label style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Class 10th Details</label>
+                        </div>
+                        
+                        <div class="form-group full">
+                            <label for="grade10">10th Percentage (%) <span class="required">*</span></label>
+                            <input type="number" id="grade10" name="grade10" step="0.1" min="0" max="100" placeholder="e.g. 90.2" required style="max-width: 50%;" >
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-prev" onclick="prevStep(3)">&larr; Previous</button>
+                        <button type="submit" class="btn btn-submit">Submit Application</button>
+                    </div>
+                </div>
+
+            </form>
+
+            <!-- Success State (Shown via JS on submit for demo) -->
+            <div class="success-message" id="successState">
+                <div class="success-icon">
+                    <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <h2>Application Submitted!</h2>
+                <p>Thank you for applying to IGEC Sagar. We have received your details and will contact you shortly on your registered email address.</p>
+                <a href="/" class="btn btn-outline" style="border: 1px solid var(--border); padding: 10px 24px; text-decoration: none; color: var(--text);">Return to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Multi-step form logic
+        const sections = [
+            document.getElementById('section-1'),
+            document.getElementById('section-2'),
+            document.getElementById('section-3')
+        ];
+        
+        const steps = document.querySelectorAll('.step');
+
+        function validateSection(index) {
+            // Basic HTML5 validation trigger for the current section
+            const inputs = sections[index].querySelectorAll('input[required], select[required], textarea[required]');
+            let isValid = true;
+            
+            inputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    input.reportValidity();
+                    isValid = false;
+                }
+            });
+            
+            return isValid;
+        }
+
+        function nextStep(currentStep) {
+            // Index is currentStep - 1
+            if (!validateSection(currentStep - 1)) return;
+
+            // Hide current
+            sections[currentStep - 1].classList.remove('active');
+            
+            // Show next
+            sections[currentStep].classList.add('active');
+            
+            // Update stepper
+            steps[currentStep - 1].classList.add('completed');
+            steps[currentStep].classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function prevStep(currentStep) {
+            // Hide current
+            sections[currentStep - 1].classList.remove('active');
+            
+            // Show previous
+            sections[currentStep - 2].classList.add('active');
+            
+            // Update stepper
+            steps[currentStep - 1].classList.remove('active');
+            steps[currentStep - 2].classList.remove('completed');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Intercept form submit for demo purposes (optional)
+        document.getElementById('admissionForm').addEventListener('submit', function(e) {
+            // Uncomment the lines below to show the success message without actually submitting to backend yet
+            // e.preventDefault();
+            // this.style.display = 'none';
+            // document.getElementById('successState').style.display = 'block';
+            // document.getElementById('stepper').style.display = 'none';
+            // document.querySelector('.form-header p').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

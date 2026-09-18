@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submitted | IGEC Sagar</title>
+      <link rel="stylesheet" href="{% static 'success.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <div class="card">
+        <!-- Success Icon -->
+        <div class="icon-wrap">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+        </div>
+
+        <h1>Application Submitted!</h1>
+        <p class="sub-text">
+            Congratulations! Your admission application to Indira Gandhi Engineering College has been received successfully.
+        </p>
+
+        <!-- Roll Number Box — Django fills {{ roll_number }} with the actual value -->
+        <div class="roll-box">
+            <div class="roll-label">📋 Your Roll Number</div>
+            <!--
+                {{ roll_number }} is a Django Template Tag.
+                Django replaces this with the actual roll number value
+                that was passed from the success() view function in views.py.
+                For example, it becomes: 0601EE260155
+            -->
+            <div class="roll-number">{{ roll_number }}</div>
+        </div>
+        <p class="roll-hint">⚠️ Please save this roll number — you'll need it to view your details.</p>
+
+        <hr class="divider">
+
+        <!-- Explanation box -->
+        <div class="info-box">
+            <strong>What does this roll number mean?</strong><br>
+            <code>{{ roll_number }}</code> is structured as:<br>
+            <strong>0601</strong> (College Code) + <strong>Branch</strong> + <strong>Year</strong> + <strong>Sequence No.</strong>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="btn-group">
+            <a href="/details?roll={{ roll_number }}" class="btn btn-fill">
+                View My Details →
+            </a>
+            <a href="/" class="btn btn-outline">
+                ← Return to Home
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | IGEC Sagar</title>
+    <meta name="description" content="Learn about Indira Gandhi Engineering College, Sagar.">
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">
+                <div class="logo-mark">IG</div>
+                <div class="logo-text">
+                    <strong>IGEC Sagar</strong>
+                    <small>Est. 1996</small>
+                </div>
+            </a>
+            <a href="/" class="back-link">
+                &larr; Back to Home
+            </a>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container about-hero-content fade-up">
+            <h1>Discover IGEC Sagar</h1>
+            <p>A premier government autonomous engineering institution in Madhya Pradesh, empowering technical minds since 1996.</p>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container grid-2">
+            <div class="content-block fade-up">
+                <h2>Our Heritage</h2>
+                <p>Established in 1996, Indira Gandhi Engineering College (IGEC) is a highly respected government-autonomous institute located in Sagar, Madhya Pradesh.</p>
+                <p>Spread across a lush 220-acre campus, IGEC has continually fostered a culture of innovation, hands-on learning, and technical excellence. Our mission is to produce highly skilled engineers who are ready to face global challenges and contribute meaningfully to society.</p>
+            </div>
+            <div class="image-wrapper fade-up">
+                <img src="{% static 'college.png' %}" alt="IGEC Campus Building">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container fade-up">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h2 style="font-family: var(--serif); font-size: 2.5rem; color: var(--text);">Academic Excellence & Facilities</h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 10px auto;">We provide top-notch education and comprehensive facilities to ensure our students thrive academically and personally.</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="info-card">
+                    <h3>Undergraduate Courses</h3>
+                    <p style="margin-bottom: 12px; color: var(--text-secondary); font-size: 0.95rem;">We offer B.E. (Bachelor of Engineering) in multiple disciplines through state-level counseling:</p>
+                    <ul>
+                        <li>Computer Engineering / IT</li>
+                        <li>Civil Engineering</li>
+                        <li>Electrical Engineering</li>
+                        <li>Mechanical Engineering</li>
+                        <li>Electronics & Communication</li>
+                        <li>Chemical Engineering</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Campus Facilities</h3>
+                    <p style="margin-bottom: 12px; color: var(--text-secondary); font-size: 0.95rem;">A 220-acre vibrant campus equipped with modern amenities:</p>
+                    <ul>
+                        <li>Separate Boys & Girls Hostels</li>
+                        <li>Well-equipped Labs & Workshops</li>
+                        <li>Central Library with internet</li>
+                        <li>Sports & Recreation grounds</li>
+                        <li>Auditorium & Seminar Halls</li>
+                        <li>Cafeteria & Medical Dispensary</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container grid-2" style="direction: rtl;">
+            <div class="content-block fade-up" style="direction: ltr;">
+                <h2>Career & Growth</h2>
+                <p>Our dedicated Training and Placement Cell actively works with leading tech companies and core industries to provide excellent career opportunities for our students.</p>
+                <p>Beyond academics, students engage in technical fests, robotics, coding contests, and sports, ensuring a holistic development that prepares them for leadership roles in the industry.</p>
+            </div>
+            <div class="image-wrapper fade-up" style="direction: ltr;">
+                <img src="{% static 'college2.png' %}" alt="Students at IGEC Tech Fest">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h4>IGEC Sagar</h4>
+                    <p>Indira Gandhi Engineering College is a government engineering institution established in 1996, committed to quality technical education and shaping future engineers of India.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7.5v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/details">Student Details</a></li>
+                        <li><a href="/fees">Fee Submission</a></li>
+                        <li><a href="/form">Admission Form</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Departments</h4>
+                    <ul>
+                        <li><a href="#">Information Technology</a></li>
+                        <li><a href="#">Mechanical</a></li>
+                        <li><a href="#">Civil</a></li>
+                        <li><a href="#">Electronics & Comm.</a></li>
+                        <li><a href="#">Electrical</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Baheriya Gram - Damoh Road,<br>Sagar, M.P. 470004</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>igec.sagar@mp.gov.in</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        <span>+91 7582-265555</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 Indira Gandhi Engineering College, Sagar (M.P.) — All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal animation
+        const fadeEls = document.querySelectorAll('.fade-up');
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    obs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        fadeEls.forEach(el => obs.observe(el));
+    </script>
+</body>
+</html>

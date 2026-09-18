@@ -1,0 +1,506 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGEC Sagar — Indira Gandhi Engineering College</title>
+    <meta name="description" content="Indira Gandhi Engineering College, Sagar (M.P.) — A government engineering college offering B.Tech programs in IT, Mechanical, Civil, Electrical and Electronics Engineering since 1996.">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+    <!-- Info Bar -->
+    <div class="info-bar">
+        <div class="container">
+            <span>NH-26, Sagar – Damoh Road, Sagar, M.P. 470004</span>
+            <div class="info-bar-right">
+                <a href="mailto:igec.sagar@mp.gov.in">igec.sagar@mp.gov.in</a>
+                <a href="tel:+917582265555">+91 7582-265555</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="/" class="logo" id="nav-brand">
+                <div class="logo-mark">IG</div>
+                <div class="logo-text">
+                    <strong>IGEC Sagar</strong>
+                    <small>Est. 1996 &middot; AICTE Approved</small>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-list" id="navList">
+                    <li><a href="/" class="current" id="nav-home">Home</a></li>
+                    <li><a href="/about" id="nav-about">About</a></li>
+                    <li><a href="/details" id="nav-students">Students</a></li>
+                    <li><a href="/fees" id="nav-fees">Fees</a></li>
+                    <li class="apply-link"><a href="/form" id="nav-admission">Apply Now</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <span class="hero-tag">Admissions Open 2026-27</span>
+                <h1>Welcome to <em>Indira Gandhi</em> Engineering College</h1>
+                <p class="hero-location">Sagar, Madhya Pradesh</p>
+                <p class="hero-desc">
+                    A government engineering institution shaping future engineers since 1996. 
+                    Affiliated to RGPV Bhopal, approved by AICTE — offering quality technical 
+                    education with modern infrastructure and dedicated faculty.
+                </p>
+                <div class="hero-actions">
+                    <a href="/form" class="btn btn-fill" id="hero-apply">Apply for Admission</a>
+                    <a href="/about" class="btn btn-outline" id="hero-explore">Explore Campus</a>
+                </div>
+            </div>
+
+            <div class="hero-images fade-in" style="transition-delay: 0.15s;">
+                <div class="hero-img-main">
+                    <img src="{% static 'college.png' %}" alt="IGEC Main Building">
+                </div>
+                <div class="hero-img-small">
+                    <img src="{% static 'college2.png' %}" alt="IGEC Campus View">
+                </div>
+                <div class="hero-stamp">
+                    <strong>45+</strong>
+                    <span>Years</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ticker -->
+    <div class="ticker">
+        <div class="ticker-track">
+            <span class="ticker-item">Admission Open for B.Tech 2026-27</span>
+            <span class="ticker-item">Placement Drive 2026 — 85%+ Students Placed</span>
+            <span class="ticker-item">Annual Tech Fest "IGNITIA 2026" — Register Now</span>
+            <span class="ticker-item">New AI & Data Science Lab Inaugurated</span>
+            <span class="ticker-item">Semester Exam Schedule Released</span>
+            <span class="ticker-item">Admission Open for B.Tech 2026-27</span>
+            <span class="ticker-item">Placement Drive 2026 — 85%+ Students Placed</span>
+            <span class="ticker-item">Annual Tech Fest "IGNITIA 2026" — Register Now</span>
+            <span class="ticker-item">New AI & Data Science Lab Inaugurated</span>
+            <span class="ticker-item">Semester Exam Schedule Released</span>
+        </div>
+    </div>
+
+    <!-- Numbers -->
+    <section class="numbers">
+        <div class="container">
+            <div class="numbers-grid">
+                <div class="num-item fade-in" id="stat-students">
+                    <div class="value" data-target="2500">0+</div>
+                    <div class="label">Students Enrolled</div>
+                </div>
+                <div class="num-item fade-in" id="stat-faculty" style="transition-delay:0.08s">
+                    <div class="value" data-target="120">0+</div>
+                    <div class="label">Faculty Members</div>
+                </div>
+                <div class="num-item fade-in" id="stat-placement" style="transition-delay:0.16s">
+                    <div class="value" data-target="85">0%</div>
+                    <div class="label">Placement Rate</div>
+                </div>
+                <div class="num-item fade-in" id="stat-years" style="transition-delay:0.24s">
+                    <div class="value" data-target="45">0+</div>
+                    <div class="label">Years of Excellence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="section section-alt" id="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img-wrap fade-in">
+                    <img src="{% static 'college2.png' %}" alt="IGEC Campus Panorama">
+                </div>
+                <div class="about-text fade-in" style="transition-delay:0.1s">
+                    <div class="section-heading">
+                        <span class="overline">About IGEC</span>
+                        <h2>Building Tomorrow's Engineers</h2>
+                    </div>
+                    <p>
+                        Indira Gandhi Engineering College, Sagar was established in 1996 by the 
+                        Government of Madhya Pradesh. Located on NH-26, Sagar–Damoh Road, the campus 
+                        is spread across a lush green landscape and is affiliated to Rajiv Gandhi 
+                        Proudyogiki Vishwavidyalaya (RGPV), Bhopal.
+                    </p>
+                    <p>
+                        With well-equipped laboratories, a central library, experienced faculty, 
+                        and a strong emphasis on practical learning, the college has consistently 
+                        produced skilled engineers who serve across industries and government sectors.
+                    </p>
+                    <ul class="checklist">
+                        <li>AICTE Approved</li>
+                        <li>RGPV Affiliated</li>
+                        <li>Government Institution</li>
+                        <li>Modern Laboratories</li>
+                        <li>Hostel Facility</li>
+                        <li>Sports Ground</li>
+                    </ul>
+                    <a href="/about" class="btn btn-fill" id="about-learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DEPARTMENTS ==================== -->
+    <section class="section" id="departments-section">
+        <div class="container">
+            <div class="section-heading centered fade-in">
+                <span class="overline">Departments</span>
+                <h2>Engineering Programs</h2>
+                <p>Five AICTE-approved B.Tech programs built to prepare you for real-world engineering challenges.</p>
+            </div>
+
+            <div class="dept-grid">
+                <div class="dept-card fade-in" id="dept-it">
+                    <div class="dept-icon" style="background: var(--accent-bg); color: var(--accent);">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>Information Technology Engineering</h3>
+                    <p>Programming, algorithms, AI, software development — with hands-on industry projects.</p>
+                    <span class="seats">Intake: 60 Seats</span>
+                </div>
+
+                <div class="dept-card fade-in" style="transition-delay:0.06s" id="dept-mech">
+                    <div class="dept-icon" style="background: var(--warm-bg); color: var(--warm);">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                    </div>
+                    <h3>Mechanical Engineering</h3>
+                    <p>Thermodynamics, manufacturing, robotics and automotive engineering with workshop facilities.</p>
+                    <span class="seats">Intake: 60 Seats</span>
+                </div>
+
+                <div class="dept-card fade-in" style="transition-delay:0.12s" id="dept-civil">
+                    <div class="dept-icon" style="background: #eef7ee; color: #3d7a3d;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 21h18M3 7v1a3 3 0 006 0V7m0 1a3 3 0 006 0V7m0 1a3 3 0 006 0V7H3l2-4h14l2 4M4 21V10.87M20 21V10.87"/><path d="M8 14h0M16 14h0M12 14h0M8 18h0M16 18h0M12 18h0"/></svg>
+                    </div>
+                    <h3>Civil Engineering</h3>
+                    <p>Structural design, construction, urban planning and sustainable infrastructure development.</p>
+                    <span class="seats">Intake: 60 Seats</span>
+                </div>
+
+                <div class="dept-card fade-in" style="transition-delay:0.18s" id="dept-ec">
+                    <div class="dept-icon" style="background: #f5eef7; color: #7a3d8c;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 10h-4V4a2 2 0 00-4 0v6H6a2 2 0 000 4h4v6a2 2 0 004 0v-6h4a2 2 0 000-4z"/></svg>
+                    </div>
+                    <h3>Electronics &amp; Communication</h3>
+                    <p>VLSI, embedded systems, signal processing and telecommunications engineering.</p>
+                    <span class="seats">Intake: 60 Seats</span>
+                </div>
+
+                <div class="dept-card fade-in" style="transition-delay:0.24s" id="dept-ee">
+                    <div class="dept-icon" style="background: #fef5e7; color: #b8860b;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <h3>Electrical Engineering</h3>
+                    <p>Power systems, renewable energy, electrical machines and control systems.</p>
+                    <span class="seats">Intake: 60 Seats</span>
+                </div>
+
+                <div class="dept-card cta-card fade-in" style="transition-delay:0.3s" id="dept-cta">
+                    <h3>Ready to Start?</h3>
+                    <p>Begin your engineering journey at IGEC Sagar. Applications for 2026-27 are now open.</p>
+                    <a href="/form" class="btn" id="dept-apply">Apply Now &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CAMPUS GALLERY ==================== -->
+    <section class="section section-warm" id="gallery-section" style="overflow:hidden">
+        <div class="container">
+            <div class="section-heading centered fade-in">
+                <span class="overline">Campus Life</span>
+                <h2>Life at IGEC Sagar</h2>
+                <p>A glimpse of our green campus, modern facilities, and vibrant student community.</p>
+            </div>
+        </div>
+        <div class="gallery-strip" id="galleryStrip">
+            <figure class="gallery-card"><img src="{% static 'college.png' %}" alt="Academic Block"><figcaption>Main Academic Block</figcaption></figure>
+            <figure class="gallery-card"><img src="{% static 'college2.png' %}" alt="Campus"><figcaption>Green Campus</figcaption></figure>
+            <figure class="gallery-card"><img src="{% static 'college.png' %}" alt="Labs"><figcaption>Laboratories</figcaption></figure>
+            <figure class="gallery-card"><img src="{% static 'college2.png' %}" alt="Sports"><figcaption>Sports Grounds</figcaption></figure>
+            <figure class="gallery-card"><img src="{% static 'college.png' %}" alt="Library"><figcaption>Central Library</figcaption></figure>
+            <figure class="gallery-card"><img src="{% static 'college2.png' %}" alt="Hostel"><figcaption>Hostel Block</figcaption></figure>
+            <!-- loop duplicates -->
+            <figure class="gallery-card"><img src="{% static 'college.png' %}" alt="Academic Block"><figcaption>Main Academic Block</figcaption></figure>
+            <figure class="gallery-card"><img src="{% static 'college2.png' %}" alt="Campus"><figcaption>Green Campus</figcaption></figure>
+            <figure class="gallery-card"><img src="{% static 'college.png' %}" alt="Labs"><figcaption>Laboratories</figcaption></figure>
+            <figure class="gallery-card"><img src="{% static 'college2.png' %}" alt="Sports"><figcaption>Sports Grounds</figcaption></figure>
+            <figure class="gallery-card"><img src="{% static 'college.png' %}" alt="Library"><figcaption>Central Library</figcaption></figure>
+            <figure class="gallery-card"><img src="{% static 'college2.png' %}" alt="Hostel"><figcaption>Hostel Block</figcaption></figure>
+        </div>
+    </section>
+
+    <!-- ==================== WHY IGEC ==================== -->
+    <section class="section section-alt" id="why-section">
+        <div class="container">
+            <div class="section-heading centered fade-in">
+                <span class="overline">Why IGEC</span>
+                <h2>What Sets Us Apart</h2>
+                <p>Here's why students choose Indira Gandhi Engineering College for their career.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-item fade-in" id="why-faculty">
+                    <div class="icon-wrap" style="background:var(--accent-bg)">
+                        <svg fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <h3>Experienced Faculty</h3>
+                    <p>120+ qualified professors with decades of academic and industry experience.</p>
+                </div>
+
+                <div class="why-item fade-in" style="transition-delay:0.06s" id="why-infra">
+                    <div class="icon-wrap" style="background:#eef7ee">
+                        <svg fill="none" stroke="#3d7a3d" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h3>Modern Infrastructure</h3>
+                    <p>Smart classrooms, well-equipped labs, high-speed internet across the campus.</p>
+                </div>
+
+                <div class="why-item fade-in" style="transition-delay:0.12s" id="why-placement">
+                    <div class="icon-wrap" style="background:var(--warm-bg)">
+                        <svg fill="none" stroke="var(--warm)" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                    </div>
+                    <h3>Strong Placements</h3>
+                    <p>85%+ placement rate with TCS, Infosys, Wipro and government organisations.</p>
+                </div>
+
+                <div class="why-item fade-in" style="transition-delay:0.18s" id="why-affordable">
+                    <div class="icon-wrap" style="background:#f5eef7">
+                        <svg fill="none" stroke="#7a3d8c" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    </div>
+                    <h3>Affordable Fees</h3>
+                    <p>Government subsidized fees with scholarship support for deserving students.</p>
+                </div>
+
+                <div class="why-item fade-in" style="transition-delay:0.24s" id="why-research">
+                    <div class="icon-wrap" style="background:#fef5e7">
+                        <svg fill="none" stroke="#b8860b" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </div>
+                    <h3>Research Focus</h3>
+                    <p>Active research labs, student projects, hackathons and industry collaboration.</p>
+                </div>
+
+                <div class="why-item fade-in" style="transition-delay:0.3s" id="why-hostel">
+                    <div class="icon-wrap" style="background:#eef3fa">
+                        <svg fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><path d="M10 20v-6h4v6"/></svg>
+                    </div>
+                    <h3>Hostel &amp; Amenities</h3>
+                    <p>Separate hostels for boys and girls with mess, Wi-Fi and 24/7 security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="cta-band" id="cta-section">
+        <div class="container fade-in">
+            <h2>Begin Your Engineering Journey</h2>
+            <p>Admissions are open for B.Tech 2026-27. Secure your seat at one of MP's finest government engineering colleges.</p>
+            <div class="cta-actions">
+                <a href="/form" class="btn btn-fill" id="cta-apply">Apply for Admission</a>
+                <a href="/details" class="btn btn-outline" id="cta-details">Student Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWS ==================== -->
+    <section class="section" id="news-section">
+        <div class="container">
+            <div class="section-heading centered fade-in">
+                <span class="overline">Latest</span>
+                <h2>News &amp; Events</h2>
+                <p>Stay updated with happenings, achievements and announcements from IGEC.</p>
+            </div>
+
+            <div class="news-grid">
+                <article class="news-card fade-in" id="news-placement">
+                    <div class="thumb"><img src="{% static 'college.png' %}" alt="Placement Drive"></div>
+                    <div class="body">
+                        <div class="date">September 2026</div>
+                        <h3>Campus Placement Drive — Record Placements</h3>
+                        <p>Over 85% eligible students placed in TCS, Infosys, Wipro, and Persistent Systems.</p>
+                    </div>
+                </article>
+
+                <article class="news-card fade-in" style="transition-delay:0.1s" id="news-techfest">
+                    <div class="thumb"><img src="{% static 'college2.png' %}" alt="Tech Fest"></div>
+                    <div class="body">
+                        <div class="date">August 2026</div>
+                        <h3>IGNITIA 2026 — Annual Technical Festival</h3>
+                        <p>2000+ participants from 50+ colleges in coding contests, robotics and paper presentations.</p>
+                    </div>
+                </article>
+
+                <article class="news-card fade-in" style="transition-delay:0.2s" id="news-lab">
+                    <div class="thumb"><img src="{% static 'college.png' %}" alt="New Lab"></div>
+                    <div class="body">
+                        <div class="date">July 2026</div>
+                        <h3>New AI &amp; Data Science Lab Inaugurated</h3>
+                        <p>GPU workstations for machine learning research and AI projects now available to students.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h4>IGEC Sagar</h4>
+                    <p>Indira Gandhi Engineering College is a government engineering institution established in 1996, committed to quality technical education and shaping future engineers of India.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook" id="social-fb">
+                            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" id="social-tw">
+                            <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7.5v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" id="social-ig">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube" id="social-yt">
+                            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/" id="footer-home">Home</a></li>
+                        <li><a href="/about" id="footer-about">About Us</a></li>
+                        <li><a href="/details" id="footer-students">Student Details</a></li>
+                        <li><a href="/fees" id="footer-fees">Fee Submission</a></li>
+                        <li><a href="/form" id="footer-admission">Admission Form</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Departments</h4>
+                    <ul>
+                        <li><a href="#" id="footer-it">Information Technology</a></li>
+                        <li><a href="#" id="footer-me">Mechanical</a></li>
+                        <li><a href="#" id="footer-ce">Civil</a></li>
+                        <li><a href="#" id="footer-ece">Electronics & Comm.</a></li>
+                        <li><a href="#" id="footer-ee">Electrical</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Baheriya Gram - Damoh Road,<br>Sagar, M.P. 470004</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>igec.sagar@mp.gov.in</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        <span>+91 7582-265555</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 Indira Gandhi Engineering College, Sagar (M.P.) — All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="to-top" id="toTop" aria-label="Back to top">&uarr;</button>
+
+    <!-- ==================== JS ==================== -->
+    <script>
+        // Header shadow on scroll
+        const header = document.getElementById('header');
+        const toTop = document.getElementById('toTop');
+
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('has-shadow', scrollY > 40);
+            toTop.classList.toggle('show', scrollY > 600);
+        });
+
+        toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Mobile menu
+        const menuBtn = document.getElementById('menuBtn');
+        const navList = document.getElementById('navList');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('open');
+            navList.classList.toggle('open');
+        });
+        document.querySelectorAll('.nav-list a').forEach(a =>
+            a.addEventListener('click', () => {
+                menuBtn.classList.remove('open');
+                navList.classList.remove('open');
+            })
+        );
+
+        // Scroll reveal (IntersectionObserver)
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
+        fadeEls.forEach(el => obs.observe(el));
+
+        // Counter animation
+        let countersDone = false;
+        function runCounters() {
+            document.querySelectorAll('.num-item .value').forEach(el => {
+                const target = +el.dataset.target;
+                const isPercent = el.textContent.includes('%');
+                const suffix = isPercent ? '%' : '+';
+                let cur = 0;
+                const step = target / 80;
+                const tick = () => {
+                    cur += step;
+                    if (cur < target) {
+                        el.textContent = Math.floor(cur) + suffix;
+                        requestAnimationFrame(tick);
+                    } else {
+                        el.textContent = target + suffix;
+                    }
+                };
+                tick();
+            });
+        }
+        const numSection = document.querySelector('.numbers');
+        const numObs = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting && !countersDone) {
+                countersDone = true;
+                runCounters();
+            }
+        }, { threshold: 0.35 });
+        numObs.observe(numSection);
+    </script>
+
+</body>
+</html>
